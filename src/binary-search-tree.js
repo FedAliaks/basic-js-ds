@@ -60,7 +60,7 @@ class BinarySearchTree {
   }
 
   has(data) {
-    throw new NotImplementedError('Not implemented');
+    /* throw new NotImplementedError('Not implemented'); */
     return hasValue(this.tree, data);
 
     function hasValue(node, value) {
@@ -72,7 +72,7 @@ class BinarySearchTree {
         return true;
       }
 
-      value < node.data ? hasValue(node.left, value) : hasValue(node.right, value)
+      return value < node.data ? hasValue(node.left, value) : hasValue(node.right, value)
 
     }
 
@@ -81,7 +81,7 @@ class BinarySearchTree {
   }
 
   find(data) {
-    throw new NotImplementedError('Not implemented');
+/*     throw new NotImplementedError('Not implemented'); */
     return findValue(this.tree, data);
 
     function findValue(node, value) {
@@ -93,7 +93,7 @@ class BinarySearchTree {
         return node;
       }
 
-      value < node.data ? findValue(node.left, value) : findValue(node.right, value);
+      return value < node.data ? findValue(node.left, value) : findValue(node.right, value);
     }
 
 
