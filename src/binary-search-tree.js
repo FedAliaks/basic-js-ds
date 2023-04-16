@@ -135,8 +135,8 @@ class BinarySearchTree {
         }
 
         let minRight = node.right;
-        while(minRight.right) {
-          minRight = minRight.right;
+        while(minRight.left) {
+          minRight = minRight.left;
         }
 
         node.data = minRight.data;
